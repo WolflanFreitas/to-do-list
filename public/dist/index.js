@@ -63,12 +63,11 @@
             return new Todo(todoDescription);
         },
         getReminder: function (form) {
-            var _a;
-            console.log(form.notification.value);
+            var _a, _b;
             var reminderNotifications = [
                 (_a = form.notification) === null || _a === void 0 ? void 0 : _a.value
             ];
-            var reminderDate = new Date(form.reminderDate.value);
+            var reminderDate = new Date((_b = form.scheduleDate) === null || _b === void 0 ? void 0 : _b.value);
             var reminderDescription = form.reminderDescription.value;
             form.reset();
             return new Reminder(reminderDescription, reminderDate, reminderNotifications);

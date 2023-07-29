@@ -89,11 +89,10 @@
             return new Todo(todoDescription);
         },
         getReminder(form: HTMLFormElement): Reminder {
-            console.log(form.notification.value);
             const reminderNotifications = [
                 form.notification?.value as NotificationPlatform
             ];
-            const reminderDate = new Date(form.reminderDate.value);
+            const reminderDate = new Date(form.scheduleDate?.value);
             const reminderDescription = form.reminderDescription.value;
             form.reset();
             return new Reminder(
